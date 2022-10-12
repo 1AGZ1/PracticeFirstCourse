@@ -1,0 +1,25 @@
+{
+  "name": "graff",
+  "version": "0.0.2",
+  "description": "",
+  "main": "/app/main.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "window": {
+    "width": 1120,
+    "height": 630,
+    "minwidth": 1120,
+    "minheight": 630,
+    "fullScreen": false,
+    "alwaysOnTop": false,
+    "icon": "/app/img/icon.png",
+    "borderless": false
+  },
+  "author": "Denis Davydov",
+  "license": "ISC",
+  "dependencies": {
+    "chart.js": "^3.9.1",
+    "fs": "^0.0.1-security"
+  }
+}
