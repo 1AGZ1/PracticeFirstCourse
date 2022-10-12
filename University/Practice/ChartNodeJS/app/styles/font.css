@@ -1,0 +1,26 @@
+.font{
+  font-size: 48px;
+  font-family: "Impact", "Arial";
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+}
+.menu > ul li p{
+	display: block;
+	background: rgb(0, 0, 0)black;
+	padding: 10px 20px 10px 20px;
+}
+#ListUnitBox div p{
+	font-size: 24px;
+}
+#ListButtonBox div p{
+	font-size: 16px;
+}
+#MEASUR ul li p{
+	font-size: 14px;
+}
+.SortList p{
+	font-size: 16px;
+}
+.SortList ul li p{
+	font-size: 14px;
+}

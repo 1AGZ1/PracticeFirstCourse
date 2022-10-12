@@ -1,0 +1,344 @@
+html{
+	min-width: 800px;
+	min-height: 450px;
+}
+body{
+	background: rgb(18,214,223);
+	background: radial-gradient(circle, rgba(18,214,223,1) 0%, rgba(178,118,238,1) 100%);
+}
+.menu ul,
+.menu ol{
+	list-style: none;
+}
+.menu *{
+	margin: 0;
+	padding: 0;
+}
+#Header{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 74px;
+	background: rgb(0, 0, 0);
+	justify-content: left;
+	display: block;
+}
+.menu > ul{
+	display: flex;
+}
+
+.menu > ul li{
+	justify-content: center;
+	display: block;
+}
+#UNIT{
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+#MEASUR{
+	position: absolute;
+	top: 0;
+	left: 224px;
+	height: 100%;
+}
+#SAVE{
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	/*background: #ffffff;*/
+}
+.menu li ul{
+	position: absolute;
+}
+#UNIT ul{
+	position: absolute;
+	top: 100%;
+	left: 0px;	
+	width: 100%;
+  	height: 500%;
+	justify-content: center;
+}
+#UNIT ul li{
+	width: 100%;
+  	height: 100%;
+	background: rgb(43,43,43);
+	justify-content: center;
+}
+#ListUnitBox{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 70%;
+	display: block;
+	justify-content: center;
+}
+#ListUnitBox div{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 17%;
+	border-bottom: 3px solid rgb(23,23,23);
+	display: block;
+	justify-content: center;
+}
+#ListButtonBox{
+	position: relative;
+	top: 85%;
+	left: 0;
+	width: 100%;
+	height: 14%;
+	display: flex;
+}
+#ListButtonBox div{
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	border-top: 3px solid rgb(23,23,23);
+	border-right: 3px solid rgb(23,23,23);
+	justify-content: center;
+	display: block;
+}
+#ListButtonBox div:last-child{
+	border-right: 0px;
+	display: flex;
+}
+#MEASUR ul{
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	height: 300%;
+	background: rgb(43,43,43);
+	border: 3px solid rgb(23,23,23);
+}
+#MEASUR ul li{
+	position: relative;
+	width: 270px;
+  	height: 42px;
+	justify-content: center;
+	border-bottom: 3px solid rgb(23,23,23);
+}
+.Temp{
+	background: rgb(32,111,14);
+	background: linear-gradient(0deg, rgba(32,111,14,1) 0%, rgba(53,170,27,1) 35%, rgba(54,172,27,1) 50%, rgba(53,170,27,1) 65%, rgba(32,111,14,1) 100%);
+}
+#SAVE ul{
+	position: absolute;
+	top: 100%;
+	right: 0px;	
+	width: 212px;
+	height: 149px;
+	justify-content: center;
+}
+#SAVE ul li{
+	width: 212px;
+  	height: 74px;
+	background: rgb(43,43,43);
+	justify-content: center;
+}
+#SAVE ul li:first-child{
+	border-bottom: 3px solid rgb(23,23,23);
+}
+.GrafBox{
+  background-color: rgb(43,43,43);
+  border: 1px solid rgb(23,23,23);
+  position: absolute;
+  left:  320px;
+  top: 74px;
+  width: 70%;
+  height: 80%;
+  z-index: -5;
+  justify-content: center;
+  display: block;
+}
+.GrafHeader{
+	position: absolute;
+	width: 100%;
+	height: 10%;
+	border-bottom: 3px solid rgb(23,23,23);
+	justify-content: center;
+	display: block;
+	z-index: -2;
+}
+.GrafBody{
+	position: absolute;
+	top: 10%;
+	left: 0;
+	width: 100%;
+	height: 80%;
+	justify-content: center;
+	display: block;
+	z-index: -4;
+}
+.GrafWorkSpace{
+	position: absolute;
+	top: 0;
+	left: 10%;
+	width: 80%;
+	height: 100%;
+	background: rgb(70, 70, 70);
+	z-index: -3;
+}
+.GrafFooter{
+	position: absolute;
+	display:flex;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	border-top: 3px solid rgb(23,23,23);
+	justify-content: center;
+	z-index: -2;
+}
+.SortBox ul,
+.SortBox ol{
+	list-style: none;
+}
+.SortBox *{
+	margin:0;
+	padding: 0;
+}
+.SortBox{
+	border: 3px solid rgb(23,23,23);
+	position: absolute;
+	display: block;
+	justify-content: center;
+	top: 10%;
+	left:45%;
+	width: 120px;
+	height: 40px;
+}
+.SortBox > ul{
+	position: absolute;
+	display: block;
+	justify-content: center;
+	top: 0%;
+	left:0%;
+	width: 100%;
+	height: 100%;
+}
+.SortBox > ul li{
+	 position: absolute;
+	 display: block;
+	 justify-content: center;
+	 top: 0%;
+	 left:0%;
+	 width: 100%;
+	 height: 100%;
+ }
+.SortBox > ul li p{
+	position: absolute;
+	display: block;
+	justify-content: center;
+	top:20%;
+	left:15%;
+}
+.SortList ul{
+	top: 100%;
+	display: none;
+	position: absolute;
+	transition: all 2s ease;
+	width: 100%;
+	left:-3px;
+	height: 215px;
+	background: rgb(43,43,43);
+	border-top: 3px solid rgb(23,23,23);
+	border-right: 3px solid rgb(23,23,23);
+	border-left: 3px solid rgb(23,23,23);
+}
+.SortBox ul li:hover > ul{
+	display:block;
+	transition: all 2s ease;
+}
+.SortList ul li{
+	position: relative;
+	width: 100%;
+	height: 40px;
+	justify-content: center;
+	border-bottom: 3px solid rgb(23,23,23);
+}
+.NameDate *{
+	margin: 0;
+	padding: 0;
+}
+.NameDate > p{
+	font-size: 35px;
+	padding:0;
+	margin:0;
+}
+.NameDate{
+	display: block;
+	position: absolute;
+	justify-content: center;
+	top:0;
+	left: 20px;
+	height: 100%;
+	width: 100px;
+	border-right: 3px solid rgb(23,23,23);
+}
+.Date{
+	display:flex;
+	position: relative;
+	height: 100%;
+	top:0;
+	left: 0;
+	width: 40%;
+	justify-content: center;
+	border-left: 3px solid rgb(23,23,23);
+	border-right: 3px solid rgb(23,23,23);
+}
+.DateStart{
+	left:0;
+	top:0;
+}
+.DateStart,.DateEnd{
+	height: 100%;
+	width: 20%;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+.Date > div input{
+	margin-top: 5px;
+	color:white;
+	padding:5px;
+	background: rgb(43,43,43);
+	border: 2px solid rgb(23,23,23);
+	border-radius: 4px;
+}
+.Constructor *{
+	margin: 0;
+	padding: 0;
+}
+.Constructor{
+	display: block;
+	position: absolute;
+	justify-content: center;
+	right:0;
+	height: 100%;
+	width: 200px;
+	top:0;
+	border-left: 2px solid rgb(23,23,23);
+}
+.Constructor > div{
+	display: block;
+	position: absolute;
+	justify-content: center;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+}
+.Constructor > div p{
+	display: block;
+	position: absolute;
+	left: 20px;
+	justify-content: center;
+	font-size: 35px;
+}

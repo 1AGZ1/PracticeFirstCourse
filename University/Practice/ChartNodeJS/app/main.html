@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html oncontextmenu="return false">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Graf Giraf</title>
+	<link rel="stylesheet" type="text/css" href="styles/font.css">
+	<link rel="stylesheet" type="text/css" href="styles/placement.css">
+	<link rel="stylesheet" type="text/css" href="styles/anime.css">
+	<script src="scripts/main.js"></script>
+	<script src="scripts/Chart.js"></script>
+</head>
+<body>
+	<!-- HEADER -->
+	<div id="Header" class="menu">
+		<!-- FUNCTIONAL BUTTON -->
+		<ul>
+			<!-- UNIT BUTTON--> <!-- && --> <!-- LIST BOX -->
+			<li id="UNIT">
+				<p class="font">Приборы</p>
+				<ul>
+					<!-- LIST BOX -->
+					<li>
+						<!-- LIST UNIT BOX -->
+						<div id="ListUnitBox">
+							<!-- ОПОРНЫЙ БАРОМЕТР -->
+							<div class="NoPress" id="Barom" onclick="DevicePress(0);">
+								<p class="font">ОПОР.БАРОМЕТР</p>
+							</div>
+							<!-- Hydra-L -->
+							<div class="NoPress" id="HL" onclick="DevicePress(1);">
+								<p class="font">Hydra-L</p>
+							</div>
+							<!-- Hydra-L1 -->
+							<div class="NoPress" id="HL1" onclick="DevicePress(2);">
+								<p class="font">Hydra-L1</p>
+							</div>
+							<!-- РОСА К-2 -->
+							<div class="NoPress" id="RK2" onclick="DevicePress(4);">
+								<p class="font">РОСА К-2</p>
+							</div>
+							<!-- Тест воздуха -->
+							<div class="NoPress" id="TA" onclick="DevicePress(5);">
+								<p class="font">Тест воздуха</p>
+							</div>
+							<!-- Тест Студии -->
+							<div class="NoPress" id="TS" onclick="DevicePress(3);">
+								<p class="font">Тест Студии</p>
+							</div>
+						</div>
+						<!-- LIST BUTTON BOX -->
+						<div id="ListButtonBox">
+							<!-- ALL AS ONE -->
+<!--							<div class="ClickOneApart" onclick="OneGraf(0);">-->
+<!--								<p class="font">ONe</p>-->
+<!--							</div>-->
+<!--							&lt;!&ndash; SEPARATION &ndash;&gt;-->
+<!--							<div class="OneApartButton" onclick="OneGraf(1);">-->
+<!--								<p class="font">Apart</p>-->
+<!--							</div>-->
+						</div>
+					</li>
+				</ul>
+			</li>
+			<!-- MEASUREMENTS BUTTON-->
+			<li id="MEASUR">
+				<p class="font">Измерения</p>
+				<ul>
+					<!-- temperatur -->
+					<li class="PressM" id="Tem" onclick="ChosenMeasurements(0);">
+						<p class="font">Температура</p>
+					</li>
+					<!-- pressure -->
+					<li class="NoPressM" id="Pre" onclick="ChosenMeasurements(1);">
+						<p class="font">Атм.давление</p>
+					</li>
+					<!-- humidity -->
+					<li class="NoPressM" id="Hum" onclick="ChosenMeasurements(2);">
+						<p class="font">Влажность</p>
+					</li>
+					<!-- chroma -->
+					<li class="NoPressM" id="Col" onclick="ChosenMeasurements(3);">
+						<p class="font">цв.температура</p>
+					</li>
+					<!-- illumination -->
+					<li class="NoPressM" id="Lum" onclick="ChosenMeasurements(4);">
+						<p class="font">освещенность</p>
+					</li>
+				</ul>
+			</li>
+			<!-- SAVE BUTTON BOX-->
+			<li id="SAVE">
+				<p class="font">Сохранить</p>
+				<!-- SAVE BOX -->
+				<ul>
+					<!-- JSON BOX-->
+					<li id="ButJson" onclick="SaveJSON();">
+						<p class="font">JSON</p>
+					</li>
+					<!-- CSV BOX-->
+					<li id="ButCsv" onclick="SaveCSV();">
+						<p class="font">CSV</p>
+					</li>
+				</ul>
+			</li>
+		</ul>		
+	</div>
+	<!-- GRAF BOX-->
+	<div class="GrafBox">
+		<!-- NAME BOX -->
+		<div class="GrafHeader">
+<!--			<div class="SortBox">-->
+<!--				<ul>-->
+<!--					<li class="SortList">-->
+<!--						<p  class="font">Осреднять:</p>-->
+<!--						<ul>-->
+<!--							<li class="AsIs"  onclick="ChosenAverage(0);">-->
+<!--								<p class="font">Как есть</p>-->
+<!--							</li>-->
+<!--							<li class="OneHour" onclick="ChosenAverage(1);">-->
+<!--								<p class="font">За 1 час</p>-->
+<!--							</li>-->
+<!--							<li class="ThreeHour" onclick="ChosenAverage(2);">-->
+<!--								<p class="font">За 3 часа</p>-->
+<!--							</li>-->
+<!--							<li class="OneDay" onclick="ChosenAverage(3);">-->
+<!--								<p class="font">За сутки</p>-->
+<!--							</li>-->
+<!--							<li class="MinMax" onclick="ChosenAverage(4);">-->
+<!--								<p class="font">Min/Max в день</p>-->
+<!--							</li>-->
+<!--						</ul>-->
+<!--					</li>-->
+<!--				</ul>-->
+<!--			</div>-->
+		</div>
+		<!-- GRAF SPAN BOX -->
+		<div class="GrafBody">
+			<div class="GrafWorkSpace">
+				<canvas id="myChart">
+				</canvas>
+			</div>
+		</div>
+		<!-- DATE BUTTONS BOX -->
+		<div class="GrafFooter">
+			<!-- DATE START BOX -->
+			<div class="NameDate">
+				<p class="font" >дата:</p>
+			</div>
+			<!-- DATE END BOX -->
+			<div class="Date">
+				<div class="DateStart">
+					<input type="date" class="CalendarStart" value="2022-01-10"max="2022-02-06" min="2022-01-10">
+
+				</div>
+				<div class="DateEnd">
+					<input type="date" class="CalendarEnd" value="2022-01-10"max="2022-02-06" min="2022-01-10">
+				</div>
+			</div>
+			<div class="Constructor" onclick="Constructor();">
+				<div>
+					<p class="font" >Построить</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="scripts/Animation.js"></script>
+	<script src="scripts/Graph.js"></script>
+	<script src="scripts/Data.js"></script>
+	<script src="scripts/Buttons.js"></script> <!-- на удаление -->
+
+</body>
+</html>
